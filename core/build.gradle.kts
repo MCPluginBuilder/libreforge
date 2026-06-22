@@ -1,4 +1,4 @@
-group = "com.willfp"
+﻿group = "com.willfp"
 version = rootProject.version
 
 subprojects {
@@ -88,6 +88,9 @@ publishing {
     }
 }
 
+tasks.named("generatePomFileForShadowPublication") {
+    mustRunAfter(tasks.named("clean"))
+}
 tasks.register("publishToAuxilor") {
     dependsOn(tasks.named("publishStandalonePublicationToAuxilorPrivateRepository"))
 }
