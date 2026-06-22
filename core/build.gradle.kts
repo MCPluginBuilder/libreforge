@@ -88,7 +88,7 @@ publishing {
     }
 }
 
-tasks.named("generatePomFileForShadowPublication") {
+tasks.named("generatePomFileForStandalonePublication") {
     mustRunAfter(tasks.named("clean"))
 }
 tasks.register("publishToAuxilor") {
